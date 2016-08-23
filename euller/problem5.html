@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title><!-- Insert your title here --></title>
+</head>
+<body>
+    <!-- Insert your content here -->
+</body>
+</html>
+<script>
+    var smallestMul = function(){
+        var start = 1;
+        var end = 20;
+        var currentMul = 1;
+        for(var i = start; i<=end;i++ ){
+            var tempHold = i/greatestDivisor(currentMul,i);
+            currentMul *=  Math.floor(tempHold);
+        }
+        alert(currentMul);
+        
+    }
+    var greatestDivisor = function(a, b) {
+        if ( ! b) {
+            return a;
+        }
+        var modu = a % b;
+        return greatestDivisor(b,modu);
+    }
+    smallestMul();
+</script>

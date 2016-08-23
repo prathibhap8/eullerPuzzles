@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title><!-- Insert your title here --></title>
+</head>
+<body>
+    <!-- Insert your content here -->
+</body>
+</html>
+<script>
+    var sumToPower = function(max){
+        
+        var powered = Math.pow(2,max);
+        powered = powered + "";
+        powered = powered.split("");
+        var summer = 0;
+        for(var i = 0;i<powered.length;i++){
+            summer = summer + (powered[i] * 1);
+        }
+        alert(summer);
+        
+    }
+   
+    sumToPower(1000);
+</script>

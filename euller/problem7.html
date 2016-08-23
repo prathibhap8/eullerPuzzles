@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title><!-- Insert your title here --></title>
+</head>
+<body>
+    <!-- Insert your content here -->
+</body>
+</html>
+<script>
+    var findNthPrime = function(max){
+        
+        var stillUndecided = true;
+        var counter = 2;
+        var primeCounter = 0;
+        while (stillUndecided) {
+            if (checkIfPrime(counter)) {
+                primeCounter++;
+                if (primeCounter == max) break;
+            }
+            counter++
+        }
+        alert(counter);
+        
+    }
+    var checkIfPrime = function(number) {
+        
+        for(var i = 2; i < number; i++) {
+            if(number % i === 0) {
+                return false;
+            }
+        }
+        return number > 1;
+    }
+    findNthPrime(10001);
+</script>

@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title><!-- Insert your title here --></title>
+</head>
+<body>
+    <!-- Insert your content here -->
+</body>
+</html>
+<script>
+    var maxPalindrom = function(){
+        var start = 100;
+        var end = 1000;
+        var currentMax = 0;
+        for(var i = start; i<end;i++ ){
+            for(var j = start;j<end;j++){
+                var tempMul = i*j;
+                if (checkPalindrom(tempMul) && tempMul > currentMax) {
+                    currentMax = tempMul;
+                }
+            }
+        }
+        alert(currentMax);
+        
+    }
+    var checkPalindrom = function(palNum) {
+        // hack to make javascript think that palNumb is string :P
+        palNum = palNum + "";
+        var reversedNum = palNum.split('').reverse().join('');
+        if (reversedNum == palNum) {
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+    maxPalindrom();
+</script>

@@ -1,0 +1,24 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title><!-- Insert your title here --></title>
+</head>
+<body>
+    <!-- Insert your content here -->
+</body>
+</html>
+<script>
+    var diffSumOfAllSquares = function(max){
+        
+        var sum = 0;
+        var sum2 = 0;
+        for(var i = 1; i<= max;i++){
+            sum = sum + i;
+            sum2 = sum2 + Math.pow(i,2);
+        }
+        alert(Math.pow(sum,2)-sum2);
+        
+    }
+    diffSumOfAllSquares(100);
+</script>

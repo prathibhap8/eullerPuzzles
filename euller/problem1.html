@@ -1,0 +1,21 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title><!-- Insert your title here --></title>
+</head>
+<body>
+    <!-- Insert your content here -->
+</body>
+</html>
+<script>
+    var moduAndSum = function(n){
+        n = (n == undefined)?1000:n;
+        var sum = 0;
+        for(var i = 0; i < n ; i++){
+            sum = (i%3 ==0 || i%5 == 0)? sum+i:sum;
+        }
+        alert(sum);
+    }
+    moduAndSum(1000);
+</script>

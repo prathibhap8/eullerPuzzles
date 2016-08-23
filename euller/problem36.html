@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title><!-- Insert your title here --></title>
+</head>
+<body>
+    <!-- Insert your content here -->
+</body>
+</html>
+<script>
+    var theBase2Pal = function(max){
+        
+        var sum = 0;
+        for(var i=1;i<max;i++){
+            var binned = decToBinary(i);
+            if (checkPalindrom(i)&&checkPalindrom(binned))
+                sum += i;
+        }
+        alert(sum);
+        
+    }
+    var decToBinary = function(num){
+        return (num >>> 0).toString(2);
+    }
+    var checkPalindrom = function(palNum) {
+        // hack to make javascript think that palNumb is string :P
+        palNum = palNum + "";
+        var reversedNum = palNum.split('').reverse().join('');
+        if (reversedNum == palNum) {
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+    theBase2Pal(1000000);
+</script>
